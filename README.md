@@ -9,15 +9,10 @@ docker exec certbot-container certbot certonly --webroot \
   --no-eff-email
 ```
 
-### 2. Раскомментируйте SSL-директивы в `vhosts/<домен>.conf`
-
-```nginx
-ssl_certificate     /etc/letsencrypt/live/<домен>/fullchain.pem;
-ssl_certificate_key /etc/letsencrypt/live/<домен>/privkey.pem;
-```
+### 2. Добавить конфигурационный файл в `vhosts/<домен>.conf`
 
 ### 3. Перезапустите nginx
 
 ```bash
-docker compose restart nginx-service
+docker exec nginx-container nginx -s reload
 ```
