@@ -10,7 +10,7 @@ services:
       - ./vhosts:/etc/nginx/conf.d:ro
       - ./certbot/conf:/etc/letsencrypt:ro
       - ./certbot/www:/var/www/certbot:ro
-      - ../api.demopizza.ru/storage:/var/www/api.demopizza.ru/storage:ro
+      # - ../api.demopizza.ru/storage:/var/www/api.demopizza.ru/storage:ro
     command: |
       /bin/sh -c "
       while true; do
