@@ -11,6 +11,7 @@ services:
       - ./certbot/conf:/etc/letsencrypt:ro
       - ./certbot/www:/var/www/certbot:ro
 
+      - ../admin.demopizza.ru/dist:/var/www/admin.demopizza.ru:ro
       - ../demopizza.ru/dist:/var/www/demopizza.ru:ro
       - ../kgb-orenburg.ru/dist:/var/www/kgb-orenburg.ru:ro
       
