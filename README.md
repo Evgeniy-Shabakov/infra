@@ -16,3 +16,10 @@ docker exec certbot-container certbot certonly --webroot \
 ```bash
 docker exec nginx-container nginx -s reload
 ```
+
+### После пересоздания контейнеров на которые проксирует nginx,
+### чтобы обновить IP адреса  контейнеров
+
+```bash
+docker exec nginx-container nginx -s reload
+```
