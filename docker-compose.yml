@@ -14,6 +14,7 @@ services:
       - ../admin.demopizza.ru/dist:/var/www/admin.demopizza.ru:ro
       - ../demopizza.ru/dist:/var/www/demopizza.ru:ro
       - ../kgb-orenburg.ru/dist:/var/www/kgb-orenburg.ru:ro
+      - ../admin.kgb-orenburg.ru/dist:/var/www/admin.kgb-orenburg.ru:ro
       
       - ../api.demopizza.ru/storage:/var/www/api.demopizza.ru/storage:ro
       - ../api.kgb-orenburg.ru/storage:/var/www/api.kgb-orenburg.ru/storage:ro
